@@ -1,0 +1,98 @@
+.file {
+    height: 200px;
+    flex-basis: 20%;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .file:hover{
+      background-color: rgb(230, 230, 230, 0.4);
+      box-shadow: 1px 1px 1px rgb(202, 202, 202), -1px -1px rgb(204, 204, 204);
+      cursor: pointer;
+  }
+  
+  div.active, div.active:hover{
+      background-color: rgb(204, 204, 204);
+  }
+  
+  .file__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      align-items: center;
+  }
+  
+  .file__image{
+      width:80%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .file__image img {
+      width: 100px;
+  }
+  
+  .file__name{
+      padding-top: 10px;
+      cursor: default;
+      text-align: center;
+  }
+  
+
+  .file__info{
+    content: '';
+    position: absolute;
+    min-height: 80px;
+    padding: 0px 20px;
+    z-index:2;
+    left: 0%;
+    right: 0%;
+    color: white;
+    background: rgba(70, 69, 69, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+div.active > .file__info{
+    display: flex;
+}
+
+
+  @media (max-width: 1024px){
+    .file{
+        flex-basis: 100%;
+        height: 70px;
+        border-bottom: 2px solid #d5d5d5;
+        padding-left: 20px;
+    }
+
+
+
+    .file__content{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .file__image{
+        width:80px;
+    }
+
+    .file__image img{
+        width:50px;
+        padding-left: 20px;
+    }
+
+    .file__name{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+}

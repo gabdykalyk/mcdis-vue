@@ -1,0 +1,58 @@
+@import url("./file.scss");
+@import url("./folder.scss");
+@import url("./fonts.scss");
+@import url("./navigation-panel.scss");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  background: #d8d9e4;
+}
+
+.container {
+  max-width: 66.6666%;
+  margin: auto;
+}
+
+.file-container {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.folder-title{
+  padding-top: 20px;
+  font-size: 40px;
+}
+
+.nothing{
+  margin-top: 50px;
+  text-align: center;
+}
+
+@media (max-width:1024px) {
+  .container{
+    max-width: 100%;
+  }
+  .file-container{
+    margin-top: 30px;
+  }
+  .folder-title{
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 768px){
+  
+  .folder-title{
+    padding-left: 30px;
+  }
+}
+
